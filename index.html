@@ -1,10 +1,19 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<title>BMI calculator</title>
 </head>
 
 <body>
+<h1 >BMI Calculator</h1>
+<form>
+  <label for="weight">Your weight in kg:</label>
+  <input type="number" placeholder="Your weight (in kg)">
+  <label for="height">Your height in m:</label>
+  <input type="number" placeholder="Your height (in m)">
+  <button type="submit" id="submit">Calculate your BMI</button>
+</form>
+<h2 id="msg">...</h2>
+<script src="bmi.js"></script>
 </body>
 </html>
