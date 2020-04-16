@@ -33,7 +33,6 @@ function calculateBMI() {
 	console.log('User input: ' + w + ', ' + h);
 	// calculate BMI
 	bmi = (w / (h * h)).toFixed(2);
-	//bmi = result.toFixed(2);
 	// test beregningen
 	console.log(bmi);
 	// output til brugeren:
