@@ -16,12 +16,14 @@
       <!-- content -->
       <h1 class="display-4">BMI Calculator</h1>
       <div class="jumbotron">
-        <form>
+        <form class="needs-validation" novalidate>
           <div class="form-group">
             <label for="weight">Your weight in kg:</label>
             <input class="form-control" id="weight" type="number" step="0.01" placeholder="Your weight (in kg)" required>
+            <div class="invalid-feedback">Please type your weight in kg!</div>
             <label for="height">Your height in m:</label>
             <input class="form-control" id="height" type="number" step="0.01" placeholder="Your height (in m)" required>
+            <div class="invalid-feedback">Please type your height in m (i.e. 1.78)!</div>
             <button class="btn btn-primary btn-lg btn-block mt-4" type="submit" id="submit" >Calculate your BMI</button>
           </div>
         </form>
