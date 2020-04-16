@@ -10,7 +10,7 @@ Obesity > 30
 */
 
 // global variable
-var button;
+var button, input;
 
 // eventhandling
 button = document.getElementById('submit');
@@ -20,9 +20,13 @@ button.addEventListener('click', calculateBMI);
 function calculateBMI() {
   'use strict';
 	// all logic goes here...
-	console.log('Function executed!');
+	//console.log('Function executed!');
 	// preventing form submission
 	event.preventDefault();
-	
-  
+	// get form input
+	input = document.getElementsByTagName('input');
+	//console.log(input); // is array
+	let w = input[0].value; //local variable let
+ 	let h = input[1].value;
+	console.log('User input: ' + w + ', ' + h);
 }
