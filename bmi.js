@@ -36,5 +36,13 @@ function calculateBMI() {
 	// test beregningen
 	console.log(bmi);
 	// output til brugeren:
-	msg.innerHTML = 'Your BMI: ' + bmi;
+	if(bmi < 18.5){
+		msg.innerHTML = 'Underweight (BMI: ' + bmi + ')';
+	   } else if (bmi <= 25) {
+		  msg.innerHTML = 'Normal weight (BMI: ' + bmi + ')'; 
+	   } else if (bmi <= 30) {
+		  msg.innerHTML = 'Overweight (BMI: ' + bmi + ')'; 
+	   } else {
+		   msg.innerHTML = 'Obesity (BMI: ' + bmi + ')'; 
+	   }	
 }
