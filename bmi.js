@@ -32,7 +32,7 @@ Obesity > 30
 })();
 
 // global variables
-var button, input, bmi, msg;
+var input, bmi, msg;
 
 // eventhandling
 msg = document.getElementById('msg');
