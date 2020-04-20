@@ -21,7 +21,8 @@
 	questions = [
             ['How many moons does Earth have?', 1], // questions[0]
             ['How many moons does Saturn have?', 31],
-            ['How many moons does Venus have?', 0]
+            ['How many moons does Venus have?', 0],
+            ['How many moons does Mars have?', 2]
                 ];
     
     // console.log(questions[0][0]); udgiver How many moons does Earth have? i konsolen.
@@ -29,12 +30,14 @@
 	function runQuiz(){
         // loop igennem array questions
         for(var i=0; i<questions.length; i++){
-            askQuestion(questions[i]); // 3 x kald til funktionen med parameter variablen i
+            askQuestion(questions[i]); // iterationer med kald til funktionen med parameter variablen i
         };   
     }
 	
 	function askQuestion(array){ // funktion med argument
-        console.log(array[0]);
+        //console.log(array[1]);
+        // lokal variable med nøgleord let
+        let answer = prompt(array[0], ''); //skaber en prompt dialog med mulighed for bruger input
     }  
 	
 	function giveFeedback(){}
