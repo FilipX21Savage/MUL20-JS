@@ -27,10 +27,13 @@
     // console.log(questions[0][0]); udgiver How many moons does Earth have? i konsolen.
 	
 	function runQuiz(){
-        askQuestion(questions[1]); // kald til funktionen med parameter
+        // loop igennem array questions
+        for(var i=0; i<questions.length; i++){
+            askQuestion(questions[i]); // 3 x kald til funktionen med parameter variablen i
+        };   
     }
 	
-	function askQuestion(array){ // funktion med parameter
+	function askQuestion(array){ // funktion med argument
         console.log(array[0]);
     }  
 	
