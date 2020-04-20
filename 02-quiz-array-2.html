@@ -41,7 +41,7 @@
 	function askQuestion(array){ // funktion med argument
         //console.log(array[1]);
         // lokal variable med nøgleord let
-        let answer = parseInt(result); //skaber en prompt dialog med mulighed for bruger input
+        let answer = parseInt(prompt(array[0],'')); //skaber en prompt dialog med mulighed for bruger input
         // parseInt forvandler en string til et helt nummer (integer)
         if(answer === array[1]){ // i tilfælde af et rigtig svar
                 alert('Correct!');
@@ -52,7 +52,8 @@
     }  
 	
 	function giveFeedback(){
-        feedback.innerHTML = score;
+        feedback.innerHTML = 'You got ' + score + ' out of ' + questions.length + ' questions right!';
+        button.removeEventListener('click', runQuiz); // quiz er afsluttet og kan ikke startes igen.
     }
 	
 </script>
