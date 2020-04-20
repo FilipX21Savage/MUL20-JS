@@ -13,6 +13,9 @@
 <script>
     // globale variabler - synlige for hele skriptet
 	var questions, score, feedback, button;
+    
+    button = document.getElementById('start');
+	button.addEventListener('click', runQuiz);
 	
     // 2-dimensionel array
 	questions = [
@@ -23,9 +26,13 @@
     
     // console.log(questions[0][0]); udgiver How many moons does Earth have? i konsolen.
 	
-	function runQuiz(){}
+	function runQuiz(){
+        askQuestion(questions[1]); // kald til funktionen med parameter
+    }
 	
-	function askQuestion(array){}  
+	function askQuestion(array){ // funktion med parameter
+        console.log(array[0]);
+    }  
 	
 	function giveFeedback(){}
 	
