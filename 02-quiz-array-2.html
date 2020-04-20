@@ -11,9 +11,17 @@
 
 	
 <script>
+    // globale variabler - synlige for hele skriptet
 	var questions, score, feedback, button;
-		
-	questions = [];
+	
+    // 2-dimensionel array
+	questions = [
+            ['How many moons does Earth have?', 1], // questions[0]
+            ['How many moons does Saturn have?', 31],
+            ['How many moons does Venus have?', 0]
+                ];
+    
+    // console.log(questions[0][0]); udgiver How many moons does Earth have? i konsolen.
 	
 	function runQuiz(){}
 	
