@@ -14,8 +14,11 @@
     // globale variabler - synlige for hele skriptet
 	var questions, score, feedback, button;
     
+    score = 0;
     button = document.getElementById('start');
 	button.addEventListener('click', runQuiz);
+    
+    feedback = document.getElementById('result');
 	
     // 2-dimensionel array
 	questions = [
@@ -31,16 +34,26 @@
         // loop igennem array questions
         for(var i=0; i<questions.length; i++){
             askQuestion(questions[i]); // iterationer med kald til funktionen med parameter variablen i
-        };   
+        };  
+        giveFeedback(); // kalder funktionen feedback, når quizzet er afsluttet
     }
 	
 	function askQuestion(array){ // funktion med argument
         //console.log(array[1]);
         // lokal variable med nøgleord let
-        let answer = prompt(array[0], ''); //skaber en prompt dialog med mulighed for bruger input
+        let answer = parseInt(result); //skaber en prompt dialog med mulighed for bruger input
+        // parseInt forvandler en string til et helt nummer (integer)
+        if(answer === array[1]){ // i tilfælde af et rigtig svar
+                alert('Correct!');
+                score++;
+           } else { // forkert svar
+               alert('Sorry, the correct answer is ' + array[1])
+           }
     }  
 	
-	function giveFeedback(){}
+	function giveFeedback(){
+        feedback.innerHTML = score;
+    }
 	
 </script>
 </body>
