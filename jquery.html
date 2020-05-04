@@ -4,6 +4,19 @@
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <title>jQuery Eksempel</title>
+<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function() {
+  // Handler for .ready() called.
+    $('#msg').html('jQuery = write less, do more').css('font-style', 'italic');
+    
+    // implementering af scroll animation
+    $('nav a').click(function(){
+        console.log('clicked');
+    });
+})
+    
+</script>
 </head>
 
 <body>
