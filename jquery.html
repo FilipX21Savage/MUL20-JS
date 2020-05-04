@@ -1,10 +1,14 @@
 <!doctype html>
-<html>
-<head>
+<html><head>
 <meta charset="utf-8">
+<link href="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+<link href="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.gallery.min.css" type="text/css" rel="stylesheet" /> 
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <title>jQuery Eksempel</title>
 <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<!-- featherlight lightbox plugin, loades EFTER jQuery -->
+<script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.gallery.min.js" type="text/javascript" charset="utf-8"></script>
 <script>
 $(document).ready(function() {
   // Handler for .ready() called.
@@ -18,7 +22,16 @@ $(document).ready(function() {
             scrollTop: ($(this.hash).offset().top)
         }, 500);
     });
-})
+    
+    // featherlight gallery configuration
+    $('a.gallery').featherlightGallery({
+		previousIcon: '&#9664;',     /* Code that is used as previous icon */
+		nextIcon: '&#9654;',         /* Code that is used as next icon */
+		galleryFadeIn: 100,          /* fadeIn speed when slide is loaded */
+		galleryFadeOut: 300          /* fadeOut speed before slide is loaded */
+	});
+    
+}) // <- end document.ready()
     
 </script>
 </head>
