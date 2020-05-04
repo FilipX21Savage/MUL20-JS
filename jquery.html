@@ -12,7 +12,11 @@ $(document).ready(function() {
     
     // implementering af scroll animation
     $('nav a').click(function(){
-        console.log('clicked');
+        console.log('clicked' + this.hash);
+        $('html, body').animate({
+            // this er i JS nøgleord for det element, som "ejer" funktionen
+            scrollTop: ($(this.hash).offset().top)
+        }, 500);
     });
 })
     
